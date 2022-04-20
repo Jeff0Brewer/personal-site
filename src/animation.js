@@ -82,22 +82,6 @@ var Mat4 = function(){
 	this.e = new Float32Array([1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]);
 }
 
-//multiply by other matrix from the right
-Mat4.prototype.mult = function(o){
-	for(let i = 0; i < 4; i++){
-		let av = [this.e[i+0],this.e[i+4],this.e[i+8],this.e[i+12]];
-		this.e[i+0] = dot(av, o.e.slice(0, 4));
-		this.e[i+4] = dot(av, o.e.slice(4, 8));
-		this.e[i+8] = dot(av, o.e.slice(8, 12));
-		this.e[i+12]= dot(av, o.e.slice(12));
-	}
-}
-
-//reset matrix to identity matrix
-Mat4.prototype.setIdentity = function(){
-	this.e = new Float32Array([1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]);
-}
-
 //create persepctive matrix
 Mat4.prototype.setPerspective = function(fovy, aspect, near, far){
 	fovy = Math.PI*fovy/180/2;
@@ -172,27 +156,6 @@ Mat4.prototype.translate = function(x, y, z){
 	this.e[15] += this.e[3]*x + this.e[7]*y + this.e[11]*z;
 }
 
-//rotate transformation matrix by angle in degrees on axis [x, y, z]
-Mat4.prototype.rotate = function(angle, axis){
-	angle = Math.PI/180*angle;
-	axis = norm(axis);
-
-	let x = axis[0];
-	let y = axis[1];
-	let z = axis[2];
-	let c = Math.cos(angle);
-	let s = Math.sin(angle);
-	let nc = 1-c;
-	let r = {
-		e: new Float32Array([x*x*nc+c, x*y*nc+z*s, z*x*nc-y*s, 0,
-							 x*y*nc-z*s, y*y*nc+c, y*z*nc+x*s, 0,
-							 z*x*nc+y*s, y*z*nc-x*s, z*z*nc+c, 0,
-							 0, 0, 0, 1])
-	};
-
-	this.mult(r);
-}
-
 //multiply vector by scalar
 function mult_scalar(vec, s){ 
 	return vec.map(el => el*s);
@@ -213,13 +176,6 @@ function mag(vec){
 //find normal of vector
 function norm(vec){ 
 	return mult_scalar(vec, 1/mag(vec));
-}
-
-//find dot product of two vectors
-function dot(a, b){
-	let o = 0;
-	a.forEach((el, i) => { o += el*b[i]; });
-	return o;
 }
 
 //find cross product of 3d vectors
@@ -443,7 +399,7 @@ const Animation = () => {
 	}, []);
 
     return (
-        <canvas width={width*dpr} height={height*dpr} ref={canvasRef} id="webgl"></canvas>
+        <canvas className="fade-in" width={width*dpr} height={height*dpr} ref={canvasRef} id="webgl"></canvas>
     )
 }
 

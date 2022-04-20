@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Work+Sans:wght@200&display=swap');
+
+html, body{
+	position: relative;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background-color: #fff;
+	margin: 0;
+}
+body::-webkit-scrollbar {
+	display: none;
+}
+
+main{
+	width: 100vw;
+	height: 100vh;
+}
+
+#webgl{
+	position: absolute;
+	z-index: 1;
+	width: 100vw;
+	height: 100vh;
+	background-color: #fff;
+	opacity: 1;
+}
+
+#root{
+	position: relative;
+	z-index: 2;
+}
+
+#landing{
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	color: #000;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+	user-select: none;
+	background-color: rgba(255, 255, 255, .5);
+}
+
+.namecard{
+	position: relative;
+	top: 3vh;
+	width: 80vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.namecard > h1{
+	font-family: 'Work Sans', sans-serif;
+	font-size: 13vw;
+	line-height: 13vw;
+	margin: 0;
+	opacity: 0;
+	animation-delay: 0.5s;
+}
+
+.namecard > p{
+	position: relative;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 2.5vw;
+	line-height: 2.5vw;
+	letter-spacing: 2vw;
+	margin: 0;
+	animation-delay: 1.5s;
+	opacity: 0;
+}
+
+.namecard > div{
+	animation-delay: 3s;
+	opacity: 0;
+}
+
+.arrow{
+	position: relative;
+	padding: 3vh;
+	font-size: 2.5vw;
+	animation-name: arrow-bounce;
+	animation-duration: 2s;
+	animation-delay: 3s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	background-color: transparent;
+}
+
+#about{
+	width: 100vw;
+	height: 100vh;
+	background-color: #faf;
+}
+
+@keyframes arrow-bounce{
+	0%{ top: -1vh;}
+	50%{ top: 0vh;}
+	100%{ top: -1vh;}
+}
+
+@keyframes fade-in {
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+.fade-in{
+	animation-name: fade-in;
+	animation-duration: 1s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: forwards;
+}
+
+@media only screen and (max-width: 850px){
+	.namecard {
+		top: 0vh;
+	}
+
+	.namecard > h1{
+		font-size: 22vw;
+		line-height: 18vw;
+	}
+
+	.namecard > p{
+		font-size: 4vw;
+		line-height: 6vw;
+		letter-spacing: 1.5vw;
+	}
+
+	.namecard > div > i{
+		font-size: 5vw;
+		padding: 4vh;
+	}
+}
+
+@media only screen and (max-width: 420px){
+	.namecard {
+		width: 100vw;
+	}
+
+	.namecard > h1{
+		font-size: 28vw;
+		line-height: 23vw;
+	}
+
+	.namecard > p{
+		font-size: 5vw;
+		line-height: 8vw;
+	}
+
+	.namecard > div > i{
+		font-size: 8vw;
+	}
+}

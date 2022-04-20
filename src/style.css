@@ -42,6 +42,8 @@ main{
 	z-index: 2;
 	user-select: none;
 	background-color: rgba(255, 255, 255, .5);
+	opacity: 0;
+	animation-delay: 1.5s;
 }
 
 .namecard{
@@ -60,8 +62,6 @@ main{
 	font-size: 13vw;
 	line-height: 13vw;
 	margin: 0;
-	opacity: 0;
-	animation-delay: 0.5s;
 }
 
 .namecard > p{
@@ -71,12 +71,12 @@ main{
 	line-height: 2.5vw;
 	letter-spacing: 2vw;
 	margin: 0;
-	animation-delay: 1.5s;
+	animation-delay: 2.5s;
 	opacity: 0;
 }
 
 .namecard > div{
-	animation-delay: 3s;
+	animation-delay: 4s;
 	opacity: 0;
 }
 
@@ -86,7 +86,7 @@ main{
 	font-size: 2.5vw;
 	animation-name: arrow-bounce;
 	animation-duration: 2s;
-	animation-delay: 3s;
+	animation-delay: 4s;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 	background-color: transparent;

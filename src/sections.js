@@ -7,9 +7,9 @@ const Landing = () => {
     }
   
     return (
-        <section id="landing">
+        <section id="landing" className="fade-in">
             <header className="namecard">
-                <h1 className="fade-in">Jeff Brewer</h1>
+                <h1>Jeff Brewer</h1>
                 <p className="fade-in">software developer</p>
                 <div className="fade-in" onMouseUp={scrollDown}><FaArrowDown className="arrow" /></div>
             </header>

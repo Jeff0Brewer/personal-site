@@ -9,10 +9,12 @@ const IndexPage = () => {
   return (
     <main>
       <Animation />
-      <Landing />
-      <About />
-      <Work />
-      <Contact />
+      <div>
+        <Landing />
+        <About />
+        <Work />
+        <Contact />
+      </div>
     </main>
   )
 }

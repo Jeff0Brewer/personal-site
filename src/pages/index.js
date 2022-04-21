@@ -1,6 +1,6 @@
 import * as React from "react"
 import Animation from "../animation"
-import { About, Landing } from "../sections"
+import { Landing, About, Work, Contact } from "../sections"
 
 import "../style.css"
 
@@ -11,6 +11,8 @@ const IndexPage = () => {
       <Animation />
       <Landing />
       <About />
+      <Work />
+      <Contact />
     </main>
   )
 }

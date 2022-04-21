@@ -7,9 +7,9 @@ const Landing = () => {
     }
   
     return (
-        <section id="landing" className="fade-in">
+        <section id="landing">
             <header className="namecard">
-                <h1>Jeff Brewer</h1>
+                <h1  className="fade-in">Jeff Brewer</h1>
                 <p className="fade-in">software developer</p>
                 <div className="fade-in" onMouseUp={scrollDown}><FaArrowDown className="arrow" /></div>
             </header>
@@ -20,12 +20,30 @@ const Landing = () => {
   const About = () => {
     return (
         <section id="about">
-            asdfadsaf
+            
         </section>
     );
   }
 
+  const Work = () => {
+      return (
+        <section id="work">
+            
+        </section>
+      );
+  }
+
+  const Contact = () => {
+      return (
+        <section id="contact">
+            
+        </section>
+      );
+  }
+
   export {
       Landing,
-      About
+      About,
+      Work,
+      Contact
   }

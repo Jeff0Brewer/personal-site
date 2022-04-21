@@ -204,10 +204,9 @@ const Animation = () => {
 			homeAnimRef.current.draw();
 			requestIdRef.current = requestAnimationFrame(tick);
 		};
-		const resize = () => {
+		window.addEventListener('resize', () => {
 			homeAnimRef.current.resize();
-		};
-		window.addEventListener('resize', resize);
+		});
 		homeAnimRef.current = new FlowAnimation(canvasRef.current, 40);
 		requestIdRef.current = requestAnimationFrame(tick);
 		return () => {

@@ -23,8 +23,6 @@ main{
 
 #webgl{
 	position: absolute;
-	top: 0;
-	left: 0;
 	z-index: 0;
 	width: 100vw;
 	height: 100vh;
@@ -32,9 +30,7 @@ main{
 }
 
 .gl-fade{
-	position: absolute;
-	top: 0;
-	left: 0;
+	position: relative;
 	z-index: 1;
 	width: 100vw;
 	height: 100vh;
@@ -44,18 +40,20 @@ main{
 }
 
 .gl-wrapper{
+	position: absolute;
+	top: 0;
+	left: 0;
 	pointer-events: none;
+}
+
+.gl-header{
+	position: fixed;
+	top: calc(-100vh + 100px);
+	z-index: 3;
 }
 
 #root{
 	position: relative;
-}
-
-main > section{
-	position: relative;
-	width: 100vw;
-	z-index: 2;
-	padding: 30px;
 }
 
 #landing{
@@ -117,13 +115,34 @@ main > section{
 	box-sizing: content-box;
 }
 
-#about{
-	height: 100vh;
-	background-color: #ce0c9c;
+main > section{
+	position: relative;
+	width: 100vw;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
 }
 
-#about > h1{
-	margin: 0;
+#about, #contact, #work{
+	height: 50vh;
+	background-color: white;
+}
+
+#about > div, #work > div, #contact > div{
+	width: 25vw;
+	flex-grow: 1;
+}
+
+#about > div{
+	background: linear-gradient(to right, #ce0c9c 0%, #ce0c9c 80%, #000 170%);
+}
+
+#work > div{
+	background: linear-gradient(to right, #e26676 0%, #e26676 80%, #000 170%);
+}
+
+#contact > div{
+	background: linear-gradient(to right, #ebf131 0%, #ebf131 80%, #000 170%);
 }
 
 @keyframes arrow-bounce{

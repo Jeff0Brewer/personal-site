@@ -57,11 +57,41 @@ const Landing = () => {
       </article>
     );
   }
+
+  const Expertise = () => {
+    const formatWidth = decimal => {
+      return `calc((100% - 100px)*${decimal})`;
+    }
+
+    return (
+      <article id="expertise">
+        <div className="expertise-left">
+          <a><p>Javascript</p><div style={{width: formatWidth(.95)}}></div></a>
+          <a><p>HTML</p><div style={{width: formatWidth(.9)}}></div></a>
+          <a><p>Node</p><div style={{width: formatWidth(.7)}}></div></a>
+          <a><p>GLSL</p><div style={{width: formatWidth(.85)}}></div></a>
+          <a><p>C++</p><div style={{width: formatWidth(.5)}}></div></a>
+          <a><p>Java</p><div style={{width: formatWidth(.4)}}></div></a>
+          <a><p>LaTeX</p><div style={{width: formatWidth(.8)}}></div></a>
+        </div>
+        <div className="expertise-right">
+          <a><p>Python</p><div style={{width: formatWidth(.95)}}></div></a>
+          <a><p>CSS</p><div style={{width: formatWidth(.85)}}></div></a>
+          <a><p>React</p><div style={{width: formatWidth(.65)}}></div></a>
+          <a><p>C#</p><div style={{width: formatWidth(.6)}}></div></a>
+          <a><p>C</p><div style={{width: formatWidth(.5)}}></div></a>
+          <a><p>Matlab</p><div style={{width: formatWidth(.4)}}></div></a>
+          <a><p>Racket</p><div style={{width: formatWidth(.85)}}></div></a>
+        </div>
+      </article>
+    );
+  }
   
   const About = () => {
     return (
         <section id="about">
           <Bio />
+          <Expertise />
         </section>
     );
   }

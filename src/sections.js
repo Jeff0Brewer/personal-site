@@ -3,7 +3,7 @@ import { FaArrowDown } from "react-icons/fa"
 
 const Landing = () => {
     const scrollDown = () => {
-      document.getElementById('about').scrollIntoView({behavior: 'smooth'});
+      document.querySelector('.navbar').scrollIntoView({behavior: 'smooth'});
     };
   
     return (
@@ -18,21 +18,18 @@ const Landing = () => {
   }
 
   const Navbar = () => {
-    const navbarRef = React.useRef(null);
-
     const lockNav = () => {
       if(window.scrollY > window.innerHeight){
-        navbarRef.current.classList.add('nav-lock');
+        document.querySelector('.navbar').classList.add('nav-lock');
       }
       else{
-        navbarRef.current.classList.remove('nav-lock');
+        document.querySelector('.navbar').classList.remove('nav-lock');
       }
     };
-
     window.addEventListener('scroll', lockNav);
 
     return (
-      <nav class="navbar" ref={navbarRef}>
+      <nav class="navbar">
         <button id="about-nav">About</button>
         <button id="work-nav">Work</button>
         <button id="wip-nav">WIP</button>
@@ -40,10 +37,31 @@ const Landing = () => {
       </nav>
     );
   }
+
+  const Bio = () => {
+    return (
+      <article id="bio">
+        <img className="biopic" src="./static/img/biopic.jpg"></img>
+        <div className="biotext">
+          <h1>Eventually, you do plan to have dinosaurs on your dinosaur tour, right? You really think you can fly that thing?</h1>
+          <p>
+            You know what? It is beets. I've crashed into a beet truck. Eventually, you do plan to have dinosaurs on your dinosaur tour, 
+            right? My dad once told me, laugh and the world laughs with you, Cry, and I'll give you something to cry about you little bastard!
+          </p>
+          <p>
+            Forget the fat lady! You're obsessed with the fat lady! Drive us out of here! This thing comes fully loaded. AM/FM radio, reclining 
+            bucket seats, and... power windows. We gotta burn the rain forest, dump toxic waste, pollute the air, and rip up the OZONE! 'Cause maybe
+            if we screw up this planet enough, they won't want it anymore!
+          </p>
+        </div>
+      </article>
+    );
+  }
   
   const About = () => {
     return (
         <section id="about">
+          <Bio />
         </section>
     );
   }

@@ -4,7 +4,7 @@ import { FaArrowDown } from "react-icons/fa"
 const Landing = () => {
     const scrollDown = () => {
       document.getElementById('about').scrollIntoView({behavior: 'smooth'});
-    }
+    };
   
     return (
         <div id="landing">
@@ -14,6 +14,30 @@ const Landing = () => {
                 <div className="fade-in" onMouseUp={scrollDown}><FaArrowDown className="arrow" /></div>
             </header>
         </div>
+    );
+  }
+
+  const Navbar = () => {
+    const navbarRef = React.useRef(null);
+
+    const lockNav = () => {
+      if(window.scrollY > window.innerHeight){
+        navbarRef.current.classList.add('nav-lock');
+      }
+      else{
+        navbarRef.current.classList.remove('nav-lock');
+      }
+    };
+
+    window.addEventListener('scroll', lockNav);
+
+    return (
+      <nav class="navbar" ref={navbarRef}>
+        <button id="about-nav">About</button>
+        <button id="work-nav">Work</button>
+        <button id="wip-nav">WIP</button>
+        <button id="contact-nav">Contact</button>
+      </nav>
     );
   }
   
@@ -40,6 +64,7 @@ const Landing = () => {
 
   export {
       Landing,
+      Navbar,
       About,
       Work,
       Contact

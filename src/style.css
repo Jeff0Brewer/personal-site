@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Work+Sans:wght@200&display=swap');
+:root{
+	--main-width: min(100vw, 1200px);
+}
+
 *{
 	box-sizing: border-box;
 }
 
 html, body{
-	position: relative;
 	overflow-x: hidden;
 	overflow-y: scroll;
-	background-color: #fff;
+	background-color: #111;
 	margin: 0;
 }
 
@@ -16,19 +19,20 @@ body::-webkit-scrollbar {
 }
 
 #webgl{
-	position: fixed;
+	position: absolute;
 	z-index: 0;
 	width: 100vw;
 	height: 100vh;
 	opacity: 1;
+	background-color: #fff;
 }
 
 .gl-fade{
-	position: fixed;
+	position: absolute;
 	z-index: 1;
 	width: 100vw;
 	height: 100vh;
-	background: rgba(255, 255, 255, .5);
+	background: rgba(0, 0, 0, .3);
 	opacity: 0;
 	animation-delay: 1s;
 }
@@ -43,22 +47,25 @@ body::-webkit-scrollbar {
 main > div{
 	position: relative;
 	z-index: 2;
-}
-
-.card{
-	background-color: rgba(255, 255, 255, .5);
-	border-radius: 20px;
+	color: #fff;
+	font-family: 'Roboto Mono', monospace;
 }
 
 #landing{
 	width: 100vw;
 	height: 100vh;
-	color: #000;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	user-select: none;
+}
+
+.fade-in{
+	animation-name: fade-in;
+	animation-duration: 1.5s;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
 }
 
 .namecard{
@@ -83,7 +90,6 @@ main > div{
 
 .namecard > p{
 	position: relative;
-	font-family: 'Roboto Mono', monospace;
 	font-size: 2.5vw;
 	line-height: 2.5vw;
 	letter-spacing: 2vw;
@@ -110,6 +116,52 @@ main > div{
 	box-sizing: content-box;
 }
 
+.navbar{
+	position: relative;
+	width: 100vw;
+	height: 50px;
+	background-color: #000;
+	padding-left: calc((100vw - var(--main-width))/2);
+}
+
+.nav-lock{
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.navbar > button{
+	height: 100%;
+	width: 150px;
+	font-size: 18px;
+	color: #fff;
+	border-width: 0 0 4px 0;
+	border-style: solid;
+	background-color: transparent;
+	text-transform: uppercase;
+}
+
+#about-nav{
+	border-color: #db00a4;
+}
+
+#work-nav{
+	border-color: #e5557e;
+}
+
+#wip-nav{
+	border-color: #eeaa58;
+}
+
+#contact-nav{
+	border-color: #f7ff33;
+}
+
+#about{
+	height: 200vh;
+	padding: 0;
+}
+
 @keyframes arrow-bounce{
 	0%{ top: -1vh;}
 	50%{ top: 0vh;}
@@ -119,13 +171,6 @@ main > div{
 @keyframes fade-in {
 	0%{opacity: 0;}
 	100%{opacity: 1;}
-}
-
-.fade-in{
-	animation-name: fade-in;
-	animation-duration: 1.5s;
-	animation-timing-function: ease;
-	animation-fill-mode: forwards;
 }
 
 @media only screen and (max-width: 850px){

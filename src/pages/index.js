@@ -1,6 +1,7 @@
 import * as React from "react"
 import Animation from "../animation"
-import { Landing, Navbar, About, Work, Contact } from "../sections"
+import About from "../about"
+import { Landing, Navbar, Work, Contact } from "../sections"
 
 import "../style.css"
 

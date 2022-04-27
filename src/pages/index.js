@@ -5,7 +5,7 @@ import Work from "../components/work"
 import Contact from "../components/contact"
 import { Landing, Navbar } from "../components/sections"
 
-import "../style/style.css"
+import "../style/index.css"
 
 // markup
 const IndexPage = () => {

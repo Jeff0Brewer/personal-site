@@ -29,7 +29,7 @@ const Navbar = () => {
   window.addEventListener('scroll', lockNav);
 
   const scrollToElement = el => {
-    window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth'})
+    window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 110, behavior: 'smooth'})
   };
 
   return (

@@ -1,6 +1,6 @@
 import * as React from "react"
-import useWindowDimensions from "./hooks/window-dim"
-import {GlUtil, Mat4} from "./gl-util"
+import useWindowDimensions from "../hooks/window-dim"
+import {GlUtil, Mat4} from "../gl-util"
 
 class PointFlow{
 	constructor(shaderInd, gl, glu){

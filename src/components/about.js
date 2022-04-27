@@ -1,11 +1,12 @@
 import * as React from "react"
+import "../style/about.css"
 
   const Bio = () => {
     return (
       <article id="bio">
         <img className="biopic" src="./static/img/biopic.jpg" alt=""></img>
         <div className="biotext">
-          <h1>Eventually, you do plan to have dinosaurs on your dinosaur tour, right? You really think you can fly that thing?</h1>
+          <h1>Eventually, you do plan to have dinosaurs on your dinosaur tour, right?</h1>
           <p>
             You know what? It is beets. I've crashed into a beet truck. Eventually, you do plan to have dinosaurs on your dinosaur tour, 
             right? My dad once told me, laugh and the world laughs with you, Cry, and I'll give you something to cry about you little bastard!

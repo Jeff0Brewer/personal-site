@@ -1,0 +1,66 @@
+#landing{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+}
+
+.namecard{
+	position: relative;
+	top: 3vh;
+	width: 80vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.namecard > h1{
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 300;
+	font-size: 175px;
+	line-height: 175px;
+	margin: 0;
+	opacity: 0;
+	animation-delay: 1s;
+}
+
+.namecard > p{
+	position: relative;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 600;
+	font-size: 32px;
+	line-height: 32px;
+	letter-spacing: 32px;
+	margin: 0;
+	animation-delay: 1.5s;
+	opacity: 0;
+}
+
+.namecard > div{
+	animation-delay: 3s;
+	opacity: 0;
+}
+
+.arrow{
+	position: relative;
+	padding: 3vh;
+	font-size: 25px;
+	animation-name: arrow-bounce;
+	animation-duration: 2s;
+	animation-delay: 3s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	background-color: transparent;
+	box-sizing: content-box;
+}
+
+@keyframes arrow-bounce{
+	0%{ top: -1vh;}
+	50%{ top: 0vh;}
+	100%{ top: -1vh;}
+}

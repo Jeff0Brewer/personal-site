@@ -1,0 +1,104 @@
+#contact{
+	margin-top: var(--content-spacing);
+	width: 100vw;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #000;
+}
+
+#contact > h1{
+	font-size: 50px;
+	margin: 0;
+}
+
+#social-links{
+	width: 250px;
+	margin: 20px;
+	font-size: 40px;
+	display: flex;
+	justify-content: space-around;
+}
+
+#social-links > a{
+	width: 55px;
+	height: 55px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+
+#social-links > a > svg{
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	background-color: rgba(0, 0, 0, .2);
+}
+
+#social-links > a:hover > svg{
+	background-color: transparent;
+}
+
+#linkedin-icon{
+	background-image: linear-gradient(225deg, #f7ff33 0%, #db00a4 300%);
+}
+
+#github-icon{
+	background-image: linear-gradient(225deg, #f7ff33 -100%, #db00a4 200%);
+}
+
+#twitter-icon{
+	background-image: linear-gradient(225deg, #f7ff33 -100%, #db00a4 100%);
+}
+
+#email-form{
+	display: flex;
+	flex-direction: column;
+	width: 500px;
+}
+
+#email-form > input, #email-form > textarea{
+	background-color: #222;
+	border: none;
+	color: #fff;
+	margin-bottom: 10px;
+	padding: 20px;
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+}
+
+#email-form > input{
+	height: 50px;
+}
+
+#email-form > textarea{
+	height: 300px;
+	resize: none;
+}
+
+#name-input{
+	border-radius: 20px 20px 0 0;
+}
+
+#message-input{
+	border-radius: 0 0 0 20px;
+}
+
+#email-form > button{
+	width: 100px;
+	height: 50px;
+	border-radius: 20px 0 20px 20px;
+	margin-left: auto;
+	background-color: #db00a4;
+	border: none;
+	color: #fff;
+	font-family: 'Lato', sans-serif;
+	font-size: 17px;
+}
+
+#email-form > button:hover{
+	background-color: #a4007b;
+}

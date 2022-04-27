@@ -1,0 +1,50 @@
+.navbar{
+	position: absolute;
+	width: 100vw;
+	height: var(--nav-height);
+	background-color: #000;
+	padding-left: calc((100vw - var(--main-width))/2);
+	z-index: 3;
+}
+
+.nav-lock{
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.navbar > button{
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 400;
+	height: 100%;
+	width: 150px;
+	font-size: 18px;
+	border-width: 0 0 4px 0;
+	border-style: solid;
+	background-color: transparent;
+	text-transform: uppercase;
+}
+
+.navbar > button:hover{
+	color: #fff;
+}
+
+.home-nav{
+	border-color: #db00a4;
+	color: #de84c7;
+}
+
+.about-nav{
+	border-color: #e5557e;
+	color: #e490a8;
+}
+
+.work-nav{
+	border-color: #eeaa58;
+	color: #ebc79c;
+}
+
+.contact-nav{
+	border-color: #f7ff33;
+	color: #f8fc90;
+}

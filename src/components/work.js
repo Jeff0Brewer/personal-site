@@ -1,11 +1,14 @@
-import * as React from "react"
+import React, { useState } from "react"
+import { motion } from "framer-motion"
 import "../style/work.css"
 
 const Project = props => {
+  let [hover, setHover] = useState(false);
+
     return (
-      <article className="project">
+      <article onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className="project">
         <img src={props.imgSrc} alt=""></img>
-        <div><p>{props.name}</p></div>
+        <motion.div animate={{ opacity: hover ? 0 : 1 }}><p>{props.name}</p></motion.div>
       </article>
     );
   }

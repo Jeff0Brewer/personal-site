@@ -1,6 +1,9 @@
-import * as React from "react"
+import React, { useEffect } from "react"
+import { FaArrowDown } from "react-icons/fa"
+import { motion } from "framer-motion"
 import useWindowDimensions from "../hooks/window-dim"
 import {GlUtil, Mat4} from "../gl-util"
+import "../style/landing.css"
 
 class PointFlow{
 	constructor(shaderInd, gl, glu){
@@ -198,7 +201,7 @@ const Animation = () => {
 	const {height, width} = useWindowDimensions();
 	const dpr = window.devicePixelRatio;
 
-	React.useEffect(() => {
+	useEffect(() => {
 		const tick = () => {
 			if(!canvasRef.current || !homeAnimRef.current) return;
 			homeAnimRef.current.draw();
@@ -216,10 +219,26 @@ const Animation = () => {
 
     return (
 		<div className="gl-wrapper">
-			<canvas className="fade-in" width={width*dpr} height={height*dpr} ref={canvasRef} id="webgl"></canvas>
-			<div className="gl-fade fade-in"></div>
+			<motion.canvas animate={{ opacity: [0, 1] }} transition={{ duration: .5 }} width={width*dpr} height={height*dpr} ref={canvasRef} id="webgl"></motion.canvas>
 		</div>
     )
 }
 
-export default Animation
+const Landing = () => {
+	return (
+		<motion.div id="landing" animate={{ opacity: [0, 1] }} transition={{ duration: .5, delay: 1 }}>
+			<header className="namecard">
+				<motion.h1 animate={{ y: ['20px', '0px']}} transition={{ duration: .5, delay: 1 }}>Jeff Brewer</motion.h1>
+				<motion.p animate={{ opacity: [0, 1], y: ['20px', '0px']}} transition={{ duration: .5, delay: 1.5 }}>software developer</motion.p>
+				<motion.div animate={{ y: ['-10px', '10px', '-10px'] }} transition={{ duration: 2, delay: 2.5, repeat: Infinity }} onMouseUp={() => document.querySelector('.navbar').scrollIntoView({behavior: 'smooth'})}>
+				  <motion.div className="arrow" animate={{ opacity: [0, 1]}} transition={{ duration: .5, delay: 2.5 }}><FaArrowDown /></motion.div>
+				</motion.div>
+			</header>
+		</motion.div>
+	);
+  }
+
+export { 
+	Animation,
+	Landing
+}

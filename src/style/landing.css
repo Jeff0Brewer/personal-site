@@ -1,3 +1,21 @@
+#webgl{
+	position: absolute;
+	z-index: 0;
+	width: 100vw;
+	height: 100vh;
+	opacity: 1;
+}
+
+.gl-wrapper{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	background-color: #fff;
+}
+
 #landing{
 	width: 100vw;
 	height: 100vh;
@@ -6,6 +24,8 @@
 	justify-content: center;
 	align-items: center;
 	user-select: none;
+	background: rgba(0, 0, 0, .5);
+	opacity: 0;
 }
 
 .namecard{
@@ -25,8 +45,6 @@
 	font-size: 175px;
 	line-height: 175px;
 	margin: 0;
-	opacity: 0;
-	animation-delay: 1s;
 }
 
 .namecard > p{
@@ -37,12 +55,6 @@
 	line-height: 32px;
 	letter-spacing: 32px;
 	margin: 0;
-	animation-delay: 1.5s;
-	opacity: 0;
-}
-
-.namecard > div{
-	animation-delay: 3s;
 	opacity: 0;
 }
 
@@ -50,17 +62,6 @@
 	position: relative;
 	padding: 3vh;
 	font-size: 25px;
-	animation-name: arrow-bounce;
-	animation-duration: 2s;
-	animation-delay: 3s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
 	background-color: transparent;
-	box-sizing: content-box;
-}
-
-@keyframes arrow-bounce{
-	0%{ top: -1vh;}
-	50%{ top: 0vh;}
-	100%{ top: -1vh;}
+	opacity: 0;
 }

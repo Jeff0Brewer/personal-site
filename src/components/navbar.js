@@ -1,21 +1,6 @@
-import * as React from "react"
-import { FaArrowDown } from "react-icons/fa"
-import "../style/landing.css"
+import React from "react"
 import "../style/navbar.css"
 
-const Landing = () => {
-  return (
-      <div id="landing">
-          <header className="namecard">
-              <h1  className="fade-in">Jeff Brewer</h1>
-              <p className="fade-in">software developer</p>
-              <div className="fade-in" onMouseUp={() => document.querySelector('.navbar').scrollIntoView({behavior: 'smooth'})}>
-                <FaArrowDown className="arrow" />
-              </div>
-          </header>
-      </div>
-  );
-}
 
 const Navbar = () => {
   const lockNav = () => {
@@ -42,7 +27,4 @@ const Navbar = () => {
   );
 }
 
-export {
-    Landing,
-    Navbar
-}
+export default Navbar;

@@ -22,32 +22,6 @@ body::-webkit-scrollbar {
 	display: none;
 }
 
-#webgl{
-	position: absolute;
-	z-index: 0;
-	width: 100vw;
-	height: 100vh;
-	opacity: 1;
-	background-color: #fff;
-}
-
-.gl-fade{
-	position: absolute;
-	z-index: 1;
-	width: 100vw;
-	height: 100vh;
-	background: rgba(0, 0, 0, .5);
-	opacity: 0;
-	animation-delay: 1s;
-}
-
-.gl-wrapper{
-	position: absolute;
-	top: 0;
-	left: 0;
-	pointer-events: none;
-}
-
 main > div{
 	position: relative;
 	z-index: 2;
@@ -58,18 +32,6 @@ main > div{
 main > div > section{
 	width: var(--main-width);
 	margin: auto;
-}
-
-.fade-in{
-	animation-name: fade-in;
-	animation-duration: 1.5s;
-	animation-timing-function: ease;
-	animation-fill-mode: forwards;
-}
-
-@keyframes fade-in {
-	0%{opacity: 0;}
-	100%{opacity: 1;}
 }
 
 @media only screen and (max-width: 850px){

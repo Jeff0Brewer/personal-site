@@ -1,6 +1,12 @@
+#work{
+	width: 100vw;
+}
+
 .project{
 	position: relative;
-	margin: var(--content-spacing) 0 0 0;
+	width: fit-content;
+	height: fit-content;
+	margin: var(--content-spacing) auto 0 auto;
 	border-radius: var(--content-radius);
 	overflow: hidden;
 }

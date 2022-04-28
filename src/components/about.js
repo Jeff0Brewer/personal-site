@@ -10,8 +10,8 @@ import "../style/about.css"
 
     return (
       <article ref={bioRef} id="bio">
-        <img className="biopic" src="./static/img/biopic.jpg" alt=""></img>
-        <div className="biotext">
+        <motion.img className="biopic" animate={{opacity: bioInView ? 1 : 0, y: bioInView ? '0px' : '50px'}} transition={{ duration: 0.3}} src="./static/img/biopic.jpg" alt=""></motion.img>
+        <motion.div animate={{opacity: bioInView ? 1 : 0, y: bioInView ? '0px' : '50px'}} transition={{ duration: 0.3, delay: 0.1}} className="biotext">
           <h1>Eventually, you do plan to have dinosaurs on your dinosaur tour, right?</h1>
           <p>
             You know what? It is beets. I've crashed into a beet truck. Eventually, you do plan to have dinosaurs on your dinosaur tour, 
@@ -22,7 +22,7 @@ import "../style/about.css"
             bucket seats, and... power windows. We gotta burn the rain forest, dump toxic waste, pollute the air, and rip up the OZONE! 'Cause maybe
             if we screw up this planet enough, they won't want it anymore!
           </p>
-        </div>
+        </motion.div>
       </article>
     );
   }
@@ -44,7 +44,7 @@ import "../style/about.css"
       <a>
         <p>{props.name}</p>
         <div className="exp-bar" style={{width: formatWidth(props.percent), backgroundImage: getGradient(gradOffset, gradOffset + .5*props.percent)}}>
-          <motion.div animate={{ scaleX: props.inView ? 0 : 1 }} transition={{ duration: 1.5 }}></motion.div>
+          <motion.div animate={{ scaleX: props.inView ? 0 : 1 }} transition={{ duration: 1 }}></motion.div>
         </div>
       </a>
     );

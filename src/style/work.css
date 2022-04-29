@@ -1,5 +1,5 @@
 #work{
-	width: 100vw;
+	width: var(--main-width);
 }
 
 .project{

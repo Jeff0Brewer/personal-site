@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Quicksand:wght@300;400;600&display=swap');
 :root{
 	--main-width: min(100vw, 1200px);
+	--section-spacing: 90px;
 	--content-spacing: 60px;
 	--content-radius: 30px;
 	--nav-height: 50px;

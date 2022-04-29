@@ -48,3 +48,7 @@
 	border-color: #f7ff33;
 	color: #f8fc90;
 }
+
+.nav-current{
+	color: #fff;
+}

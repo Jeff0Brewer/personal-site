@@ -31,7 +31,6 @@
 .namecard{
 	position: relative;
 	top: 3vh;
-	width: 80vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -60,7 +59,7 @@
 
 .arrow{
 	position: relative;
-	padding: 3vh;
+	padding: 30px;
 	font-size: 25px;
 	background-color: transparent;
 	opacity: 0;

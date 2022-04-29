@@ -36,23 +36,23 @@ const Navbar = () => {
   return (
     <nav ref={navRef} className="navbar">
       <motion.button className="home-nav" ref={tabRefs[0]} 
-        animate={{borderBottomWidth: focus == 0 ? borderMax : borderMin}} transition={{duration: animDuration}} 
-        onMouseUp={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
+      animate={{borderBottomWidth: focus == 0 ? borderMax : borderMin}} transition={{duration: animDuration}} 
+      onMouseUp={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
         Home
       </motion.button>
       <motion.button className="about-nav" ref={tabRefs[1]} 
-        animate={{borderBottomWidth: focus == 1 ? borderMax : borderMin}} transition={{duration: animDuration}} 
-        onMouseUp={() => scrollToElement(document.getElementById('bio'))}>
+      animate={{borderBottomWidth: focus == 1 ? borderMax : borderMin}} transition={{duration: animDuration}} 
+      onMouseUp={() => scrollToElement(document.getElementById('bio'))}>
         About
       </motion.button>
       <motion.button className="work-nav" ref={tabRefs[2]} 
-        animate={{borderBottomWidth: focus == 2 ? borderMax : borderMin}} transition={{duration: animDuration}} 
-        onMouseUp={() => scrollToElement(document.getElementById('work'))}>
+      animate={{borderBottomWidth: focus == 2 ? borderMax : borderMin}} transition={{duration: animDuration}} 
+      onMouseUp={() => scrollToElement(document.getElementById('work'))}>
         Work
       </motion.button>
       <motion.button className="contact-nav" ref={tabRefs[3]} 
-        animate={{borderBottomWidth: focus == 3 ? borderMax : borderMin}} transition={{duration: animDuration}} 
-        onMouseUp={() => scrollToElement(document.getElementById('contact'))}>
+      animate={{borderBottomWidth: focus == 3 ? borderMax : borderMin}} transition={{duration: animDuration}} 
+      onMouseUp={() => scrollToElement(document.getElementById('contact'))}>
         Contact
       </motion.button>
     </nav>

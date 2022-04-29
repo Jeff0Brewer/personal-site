@@ -1,14 +1,14 @@
 #work{
-	width: var(--main-width);
+	width: 100vw;
 }
 
 .project{
 	position: relative;
-	width: fit-content;
-	height: fit-content;
+	width: var(--main-width);
 	margin: var(--content-spacing) auto 0 auto;
 	border-radius: var(--content-radius);
 	overflow: hidden;
+	margin-top: 30px;
 }
 
 .project > img{
@@ -31,4 +31,16 @@
 	font-size: 90px;
 	font-family: 'Quicksand', sans-serif;
 	font-weight: 300;
+}
+
+.proj-article{
+	width: 100vw;	
+	background-color: #000;
+	overflow: hidden;
+	margin: 0 auto 0 auto;
+}
+
+.proj-header{
+	display: flex;
+	justify-content: center;
 }

@@ -219,19 +219,19 @@ const Animation = () => {
 
     return (
 		<div className="gl-wrapper">
-			<motion.canvas animate={{ opacity: [0, 1] }} transition={{ duration: .5 }} width={width*dpr} height={height*dpr} ref={canvasRef} id="webgl"></motion.canvas>
+			<motion.canvas animate={{ opacity: [0, 1] }} transition={{ duration: 1 }} width={width*dpr} height={height*dpr} ref={canvasRef} id="webgl"></motion.canvas>
 		</div>
     )
 }
 
 const Landing = () => {
 	return (
-		<motion.div id="landing" animate={{ opacity: [0, 1] }} transition={{ duration: .5, delay: 1 }}>
+		<motion.div id="landing" animate={{ opacity: [0, 1] }} transition={{ duration: .4, delay: 1.5 }}>
 			<header className="namecard">
-				<motion.h1 animate={{ y: ['20px', '0px']}} transition={{ duration: .5, delay: 1 }}>Jeff Brewer</motion.h1>
-				<motion.p animate={{ opacity: [0, 1], y: ['20px', '0px']}} transition={{ duration: .5, delay: 1.5 }}>software developer</motion.p>
-				<motion.div animate={{ y: ['-10px', '10px', '-10px'] }} transition={{ duration: 2, delay: 2.5, repeat: Infinity }} onMouseUp={() => document.querySelector('.navbar').scrollIntoView({behavior: 'smooth'})}>
-				  <motion.div className="arrow" animate={{ opacity: [0, 1]}} transition={{ duration: .5, delay: 2.5 }}><FaArrowDown /></motion.div>
+				<motion.h1 animate={{ y: ['20px', '0px']}} transition={{ duration: .4, delay: 1.5 }}>Jeff Brewer</motion.h1>
+				<motion.p animate={{ opacity: [0, 1], y: ['20px', '0px']}} transition={{ duration: .4, delay: 2 }}>software developer</motion.p>
+				<motion.div animate={{ y: ['-7px', '7px', '-7px'] }} transition={{ duration: 2, delay: 3, repeat: Infinity }} onMouseUp={() => document.querySelector('.navbar').scrollIntoView({behavior: 'smooth'})}>
+				  <motion.div className="arrow" animate={{ opacity: [0, 1]}} transition={{ duration: .4, delay: 3 }}><FaArrowDown /></motion.div>
 				</motion.div>
 			</header>
 		</motion.div>

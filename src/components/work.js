@@ -1,41 +1,43 @@
 import React, { useState } from "react"
 import { motion } from "framer-motion"
+import { IoCloseOutline } from "react-icons/io5"
 import "../style/work.css"
 
 const Project = props => {
   const [hover, setHover] = useState(false);
   const [focus, setFocus] = useState(false);
-  const contentSpace = 60, mainWidth = 1200, headerHeight = 350;
-  const animTime = .5;
-
-  const getDefWidth = () => {
-    return Math.min(mainWidth, window.innerWidth);
-  }
-
-  const getFocWidth = () => {
-    return window.innerWidth < mainWidth ? window.innerWidth : window.innerWidth - 2*contentSpace;
-  }
+  const mainWidth = 1200, headerHeight = 350, contentRadius = 30;
+  const animTime = .4;
 
   return (
-    <motion.button className="project"
-    onMouseEnter={() => setHover(true)}
-    onMouseLeave={() => setHover(false)}
-    onMouseDown={() => setFocus(!focus)}
+    <motion.section className="project"
     animate={{
-      width: focus ? getFocWidth() + 'px' : getDefWidth() + 'px',
-      height: focus ? 'fit-content' : getDefWidth()*.6 + 'px'}}
+      width: focus ? '100vw' : `min(${mainWidth}px, 100vw)`,
+      height: focus ? 'fit-content' : `${mainWidth*.6}px`,
+      borderRadius: focus ? '0px' : `${contentRadius}px`
+    }}
     transition={{duration: animTime}}>
-      <motion.header animate={{height: focus ? headerHeight : '100%'}} trasition={{duration: animTime}}>
+      <motion.button className="proj-header"
+      animate={{height: focus ? headerHeight : '100%'}} 
+      transition={{duration: animTime}}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      onMouseUp={() => setFocus(true)}>
         <div style={{backgroundImage: `url(${props.coverImg})`}}></div>
         <motion.div style={{backgroundImage: `url(${props.headerImg})`}}
         animate={{opacity: focus ? 1 : 0}} 
         transition={{duration: animTime}}></motion.div>
-      </motion.header>
-      <motion.h1 animate={{height: focus ? headerHeight : '100%', opacity: !focus && hover ? 0 : 1}} trasition={{duration: animTime}}>
+      </motion.button>
+      <motion.h1 animate={{height: focus ? headerHeight : '100%', opacity: !focus && hover ? 0 : 1}} transition={{duration: animTime}}>
         {props.name}
       </motion.h1>
+      <button className="proj-close" aria-label="close" 
+      style={{visibility: focus ? 'visible' : 'hidden'}}
+      onMouseUp={() => setFocus(false)}>
+        <IoCloseOutline />
+      </button>
       {props.children}
-    </motion.button>
+    </motion.section>
   );
 
 }

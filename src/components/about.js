@@ -41,12 +41,12 @@ import "../style/about.css"
     }
 
     return (
-      <a ref={barRef}>
+      <div ref={barRef} className="exp-bar">
         <p>{props.name}</p>
-        <div className="exp-bar" style={{width: formatWidth(props.percent), backgroundImage: getGradient(gradOffset, gradOffset + .5*props.percent)}}>
+        <div className="exp-bar-color" style={{width: formatWidth(props.percent), backgroundImage: getGradient(gradOffset, gradOffset + .5*props.percent)}}>
           <motion.div animate={{ scaleX: barInView ? 0 : 1 }} transition={{ duration: 1 }}></motion.div>
         </div>
-      </a>
+      </div>
     );
   }
 

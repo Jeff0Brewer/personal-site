@@ -46,7 +46,7 @@
 	flex-direction: column;
 }
 
-#expertise a{
+.exp-bar{
 	margin: 5px;
 	display: flex;
 	background-color: #222;
@@ -64,14 +64,14 @@
 	background-color: #000;
 }
 
-.exp-bar{
+.exp-bar-color{
 	width: auto;
 	border-radius: 0 10px 10px 0;
 	display: flex;
 	justify-content: right;
 }
 
-.exp-bar > div{
+.exp-bar-color > div{
 	position: relative;
 	right: -1px;
 	width: 100%;

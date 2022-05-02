@@ -8,7 +8,7 @@ import "../style/about.css"
 
     return (
       <article ref={bioRef} id="bio">
-        <motion.img className="biopic" animate={{opacity: bioInView ? 1 : 0, y: bioInView ? '0px' : '50px'}} transition={{ duration: 0.3}} src="./static/img/biopic.jpg" alt="" />
+        <motion.img className="biopic" animate={{opacity: bioInView ? 1 : 0, y: bioInView ? '0px' : '50px'}} transition={{ duration: 0.3}} src="./static/biopic.jpg" alt="" />
         <motion.div animate={{opacity: bioInView ? 1 : 0, y: bioInView ? '0px' : '50px'}} transition={{ duration: 0.3, delay: 0.1}} className="biotext">
           <h1>Eventually, you do plan to have dinosaurs on your dinosaur tour, right?</h1>
           <p>

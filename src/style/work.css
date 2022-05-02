@@ -7,9 +7,8 @@
 	overflow: hidden;
 	display: block;
 	margin: var(--content-spacing) auto 0 auto;
-	border-radius: var(--content-radius);
 	width: var(--main-width);
-	background-color: #000;
+	background-color: #0a0a0a;
 	color: #fff;
 	font-family: 'Lato', sans-serif;
 }
@@ -18,8 +17,20 @@
 	position: absolute;
 	width: 100%;
 	height: 100%;
+	border: 0;
+	padding: 0;
 	max-height: calc(var(--main-width)*.6);
-	border: none;
+}
+
+.proj-header > div{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 100%;
 }
 
 .proj-close{
@@ -37,30 +48,71 @@
 	opacity: .7;
 }
 
-.project > button > div{
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-size: cover;
-	background-position: center;
-	width: 100%;
-	height: 100%;
-}
-
 .project > h1{
 	position: absolute;
+	pointer-events: none;
 	text-align: center;
 	width: 100%;
 	height: 100%;
 	margin: 0;
-	font-size: 80px;
+	font-size: 90px;
 	background-color: rgba(0, 0, 0, .5);
 	font-family: 'Quicksand', sans-serif;
 	font-weight: 300;
-	pointer-events: none;
 }
 
-.project > article{
-	margin-top: 350px;
-	height: 100vh;
+.proj-content{
+	margin-top: 400px;
+	pointer-events: none;
+	padding: calc((100vw - var(--main-width))*.5);
+	padding-top: 0;
+	padding-bottom: 50px;
+}
+
+.proj-content > p, .proj-content > h1{
+	width: var(--main-width);
+}
+
+.proj-content > p{
+	font-size: 25px;
+	margin: 30px 0;
+}
+
+.proj-content > h1{
+	margin: 100px 0 20px 0;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+.content-lg{
+	border-radius: var(--content-radius);
+	overflow: hidden;
+	width: var(--main-width);
+	margin: 20px 0;
+}
+
+.content-sm{
+	display: block;
+	border-radius: var(--content-radius);
+	width: calc(.5*var(--main-width));
+	margin: 20px auto;
+}
+
+.col{
+	display: flex;
+	justify-content: space-between;
+}
+
+.two-col{
+	width: 50%;
+	object-fit: cover;
+}
+
+.three-col{
+	width: 33.3333%;
+	object-fit: cover;
+}
+
+.center{
+	margin: 0 auto;
 }

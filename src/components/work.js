@@ -6,14 +6,14 @@ import "../style/work.css"
 const Project = props => {
   const [hover, setHover] = useState(false);
   const [focus, setFocus] = useState(false);
-  const mainWidth = 1200, headerHeight = 350, contentRadius = 30;
+  const mainWidth = 1200, cardHeight = mainWidth*.6, headerHeight = 350, contentRadius = 30;
   const animTime = .4;
 
   return (
     <motion.section className="project"
     animate={{
       width: focus ? '100vw' : `min(${mainWidth}px, 100vw)`,
-      height: focus ? 'fit-content' : `${mainWidth*.6}px`,
+      height: focus ? 'fit-content' : `${cardHeight}px`,
       borderRadius: focus ? '0px' : `${contentRadius}px`
     }}
     transition={{duration: animTime}}>
@@ -26,9 +26,12 @@ const Project = props => {
         <div style={{backgroundImage: `url(${props.coverImg})`}}></div>
         <motion.div style={{backgroundImage: `url(${props.headerImg})`}}
         animate={{opacity: focus ? 1 : 0}} 
-        transition={{duration: animTime}}></motion.div>
+        transition={{duration: animTime}}>
+        </motion.div>
       </motion.button>
-      <motion.h1 animate={{height: focus ? headerHeight : '100%', opacity: !focus && hover ? 0 : 1}} transition={{duration: animTime}}>
+      <motion.h1 
+        animate={{height: focus ? headerHeight : '100%', lineHeight: focus ? `${headerHeight}px` : `${cardHeight}px`, opacity: !focus && hover ? 0 : 1}} 
+        transition={{duration: animTime}}>
         {props.name}
       </motion.h1>
       <button className="proj-close" aria-label="close" 

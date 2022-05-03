@@ -118,35 +118,38 @@ const IrisContent = () => {
   return (
     <article className="proj-content">
       <p>
-        Forget the fat lady! You're obsessed with the fat lady! Drive us out of here! Did he just throw my cat out of the window? 
-        Forget the fat lady! You're obsessed with the fat lady! Drive us out of here! Hey, take a look at the earthlings. Goodbye! 
-        Hey, take a look at the earthlings. Goodbye!
+        A rapid gaze visualization prototyping tool. Iris visualizes real time eye tracking data and provides tools for diverse visualization 
+        editing and customization. The system allows users unfamiliar with gaze visualizations to rapidly prototype representations for a 
+        variety of scenarios. Made in collaboration with Sarah D'Angelo and Darren Gergle of Northwestern University's CollabLab.
       </p>
       <video className="content-lg" autoPlay loop muted playsInline src={`${imgDir}/iris-overview.mp4`} />
       <h1>Problem addressed:</h1>
       <p>
-        God help us, we're in the hands of engineers. Hey, you know how I'm, like, always trying to save the planet? Here's my chance.
-        Do you have any idea how long it takes those cups to decompose. They're using our own satellites against us. And the clock is ticking.
+        Gaze data is becoming more available and gaze visualization could be a powerful tool for design input and collaboration. Different 
+        contexts for gaze visualization benefit from vastly different representations of eye tracking data, but it is difficult to experiment 
+        with gaze visualization design.
       </p>
       <h1>Design approach:</h1>
       <p>
-        Eventually, you do plan to have dinosaurs on your dinosaur tour, right? So you two dig up, dig up dinosaurs? I gave it a cold? I gave it
-        a virus. A computer virus. God creates dinosaurs. God destroys dinosaurs. God creates Man. Man destroys God. Man creates Dinosaurs.
+        Gaze visualizations usually represent a few aspects of eye movement: current focus, movement, and history of fixations. To accommodate 
+        these requirements, we designed a few modular visualization components that are highly customizable. These components are a point at 
+        the current focus, a trail of recent movements, and connected points representing fixation history. They are designed to be 
+        generic and highly adaptable to the user's context.
       </p>
       <div className="content-lg col">
-        <img className="three-col" src={`${imgDir}/saccade.png`} alt="" />
-        <img className="three-col" src={`${imgDir}/trail.png`} alt="" />
         <img className="three-col" src={`${imgDir}/dot.png`} alt="" />
+        <img className="three-col" src={`${imgDir}/trail.png`} alt="" />
+        <img className="three-col" src={`${imgDir}/saccade.png`} alt="" />
       </div>
       <h1>Final product:</h1>
       <p>
-        Life finds a way. Checkmate... God help us, we're in the hands of engineers. Is this my espresso machine? Wh-what is-h-how did you get my
-        espresso machine? Remind me to thank John for a lovely weekend. Life finds a way. You know what? It is beets. I've crashed into a beet truck.
+        The final system provides three highly customizable visualization modules and tools to change the background context and record gaze data. 
+        These modules visualize current focus, movement, and fixation history allowing for a wide range of gaze visualization applications. This allows 
+        users to quickly design new representations in their appropriate context and identify important visualization features.
       </p>
       <video className="content-lg" autoPlay loop muted playsInline src={`${imgDir}/iris-example.mp4`} />
       <p>
-        Must go faster... go, go, go, go, go! Did he just throw my cat out of the window? My dad once told me, laugh and the world laughs with you,
-        Cry, and I'll give you something to cry about you little bastard! Hey, take a look at the earthlings. Goodbye!
+        For ease of use, editing is primarily handled by direct visualization manipulation with the mouse.
       </p>
       <div className="content-lg col">
         <img className="two-col" src={`${imgDir}/resize-start.png`} alt="" />

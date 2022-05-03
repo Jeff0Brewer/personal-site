@@ -29,6 +29,14 @@ main > div{
 	font-weight: 300;
 }
 
+p, h1{
+	letter-spacing: 1px;
+}
+
+main h1{
+	font-weight: 400;
+}
+
 main > div > section{
 	width: var(--main-width);
 	margin: auto;

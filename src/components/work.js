@@ -58,23 +58,28 @@ const GrvinContent = () => {
   return (
     <article className="proj-content">
       <p>
-        Remind me to thank John for a lovely weekend. My dad once told me, laugh and the world laughs with you, 
-        Cry, and I'll give you something to cry about you little bastard! Remind me to thank John for a lovely 
-        weekend. Do you have any idea how long it takes those cups to decompose.
+        An interactive visualization tool for analyzing the underlying physics within granular materials. Grvin visualizes data from ~50,000 
+        individual grains over ~70 timesteps as a column of granular material (sand) deforms under load. Made in collaboration with Caltech, 
+        Art Center, JPL, and designers Pooja Nair, Adrian Galvin. 
       </p>
       <video className="content-lg" autoPlay loop muted playsInline src={`${imgDir}/grvin-overview.mp4`} />
       <h1>Problem addressed:</h1>
       <p>
-        Yeah, but your scientists were so preoccupied with whether or not they could, they didn't stop to think if
-        they should. Is this my espresso machine? Wh-what is-h-how did you get my espresso machine? God creates 
-        dinosaurs. God destroys dinosaurs. God creates Man. Man destroys God. Man creates Dinosaurs.
+        The granular geomechanics team at Caltech were working to understand patterns of failure in granular materials. They hoped to understand why 
+        granular materials behave as they do, specifically, supporting force nonuniformly and breaking down in a characteristic 'shear band.' Further
+        understanding the physics in these granular samples would allow better materials to be engineered for applications like civil engineering. The
+        team had a lot of data but their ability to visualize and explore it was severely limited. Their current visualizations lacked interactivity, 
+        since rendering many grain surfaces can get computationally costly, and also suffered occlusion problems, where grains visibly obstruct each 
+        other and any important patterns.
       </p>
       <img className="content-sm" src={`${imgDir}/old-vis.png`} alt=""/>
       <h1>Design approach:</h1>
       <p>
-        Eventually, you do plan to have dinosaurs on your dinosaur tour, right? Eventually, you do plan to have 
-        dinosaurs on your dinosaur tour, right? We gotta burn the rain forest, dump toxic waste, pollute the air, and 
-        rip up the OZONE! 'Cause maybe if we screw up this planet enough, they won't want it anymore!
+        When designing our visualization tool we regularly met with the granular geomechanics team to discuss their needs for analysis. From this we 
+        tried to understand what information is most important to them and how to display it most usefully. We identified two areas of interest: 
+        force chains and movement in the shear band. Force chains meaning adjacent grain sets supporting high load and the shear band meaning an area
+        where deformation is concentrated. We iterated visualizations to clarify these phenomena and continued to meet with the team for feedback on
+        prototypes and to understand their needs.
       </p>
       <div className="content-lg col">
         <img className="two-col" src={`${imgDir}/grvin-sketch.jpg`} alt=""/>

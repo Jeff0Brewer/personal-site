@@ -7,7 +7,8 @@ import Work from "../components/work"
 import Contact from "../components/contact"
 import "../style/index.css"
 
-smoothscroll.polyfill(); //enable smooth scrolling on incompatible browsers
+//enable smooth scrolling on incompatible browsers
+smoothscroll.polyfill(); 
 
 // markup
 const IndexPage = () => {

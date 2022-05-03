@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react"
 import { motion } from "framer-motion"
 import "../style/navbar.css"
 
-
 const Navbar = () => {
   const [focus, setFocus] = useState(0);
   const navRef = useRef(null);

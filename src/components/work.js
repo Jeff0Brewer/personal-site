@@ -169,7 +169,6 @@ const Work = () => {
       <Project name="Iris" coverImg="./static/iris/iris-cover.png" headerImg="./static/iris/iris-header.png">
         <IrisContent />
       </Project>
-
     </section>
   ); 
 }

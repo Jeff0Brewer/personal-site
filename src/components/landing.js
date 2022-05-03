@@ -5,7 +5,7 @@ import useWindowDimensions from "../hooks/window-dim"
 import {GlUtil, Mat4} from "../gl-util"
 import "../style/landing.css"
 
-class PointFlow{
+class PointStream{
 	constructor(shaderInd, gl, glu){
 		this.sh = shaderInd;
 		this.elapsed = 0;
@@ -160,7 +160,7 @@ class FlowAnimation{
 		gl.uniform1f(gl.getUniformLocation(gl.program, 'u_Pheight'), this.c.height);
 		gl.viewport(0, 0, this.c.width, this.c.height);
 
-		this.flow = new PointFlow(this.sh.point, gl, glu);
+		this.flow = new PointStream(this.sh.point, gl, glu);
 		this.fill = new TexFill(this.sh.tex, gl, glu);
 
 		this.ftime = 1000/framerate;

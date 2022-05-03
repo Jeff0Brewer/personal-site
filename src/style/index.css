@@ -39,11 +39,5 @@ main h1{
 
 main > div > section{
 	width: var(--main-width);
-	margin: auto;
-}
-
-@media only screen and (max-width: 850px){
-}
-
-@media only screen and (max-width: 420px){
+	margin: 0 auto;
 }

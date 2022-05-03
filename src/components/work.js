@@ -52,9 +52,7 @@ const Project = props => {
       >
         <IoCloseOutline />
       </button>
-      <div style={{ scale: focus ? 1 : 0 }}>
-        {focus ? props.children : <article className='content-fill' />}
-      </div>
+      {props.children}
     </motion.section>
   )
 }

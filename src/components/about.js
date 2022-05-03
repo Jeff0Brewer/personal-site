@@ -7,10 +7,10 @@ import "../style/about.css"
     const [bioRef, bioInView] = useInView({ triggerOnce: true });
 
     return (
-      <article ref={bioRef} id="bio">
+      <article ref={bioRef} className="bio">
         <motion.img className="biopic" animate={{opacity: bioInView ? 1 : 0, y: bioInView ? '0px' : '50px'}} transition={{ duration: 0.3}} src="./static/biopic.jpg" alt="" />
         <motion.div animate={{opacity: bioInView ? 1 : 0, y: bioInView ? '0px' : '50px'}} transition={{ duration: 0.3, delay: 0.1}} className="biotext">
-          <h1>Eventually, you do plan to have dinosaurs on your dinosaur tour, right?</h1>
+          <h1>Hi, I'm Jeff, a cs grad and developer.</h1>
           <p>
             You know what? It is beets. I've crashed into a beet truck. Eventually, you do plan to have dinosaurs on your dinosaur tour, 
             right? My dad once told me, laugh and the world laughs with you, Cry, and I'll give you something to cry about you little bastard!
@@ -54,29 +54,29 @@ import "../style/about.css"
     const ex = {
       js: .9, html: .875, node: .7, webgl: .85,
       cpp: .45, java: .4, latex: .75, py: .9,
-      css: .85, react: .6, glsl: .8, csh: .65, 
-      c: .5, matlab: .4
+      css: .85, react: .6, glsl: .8, csh: .7, 
+      c: .55, matlab: .4
     }
 
     return (
-      <article id="expertise">
+      <article className="expertise">
         <div>
-        <SkillBar name="Javascript" percent={ex.js} left={true} />
+          <SkillBar name="Javascript" percent={ex.js} left={true} />
+          <SkillBar name="CSS" percent={ex.css} left={true} />
           <SkillBar name="HTML" percent={ex.html} left={true} />
           <SkillBar name="Node" percent={ex.node} left={true} />
+          <SkillBar name="React" percent={ex.react} left={true} />
           <SkillBar name="WebGL" percent={ex.webgl} left={true} />
-          <SkillBar name="C++" percent={ex.cpp} left={true} />
-          <SkillBar name="Java" percent={ex.java} left={true} />
-          <SkillBar name="LaTeX" percent={ex.latex} left={true} />
+          <SkillBar name="GLSL" percent={ex.glsl} left={true} />
         </div>
         <div>
           <SkillBar name="Python" percent={ex.py} left={false} />
-          <SkillBar name="CSS" percent={ex.css} left={false} />
-          <SkillBar name="React" percent={ex.react} left={false} />
-          <SkillBar name="GLSL" percent={ex.glsl} left={false} />
           <SkillBar name="C#" percent={ex.csh} left={false} />
           <SkillBar name="C" percent={ex.c} left={false} />
+          <SkillBar name="C++" percent={ex.cpp} left={false} />
+          <SkillBar name="LaTeX" percent={ex.latex} left={false} />
           <SkillBar name="Matlab" percent={ex.matlab} left={false} />
+          <SkillBar name="Java" percent={ex.java} left={false} />
         </div>
       </article>
     );

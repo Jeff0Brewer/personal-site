@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useRef } from "react"
 import { FaArrowDown } from "react-icons/fa"
 import { motion } from "framer-motion"
 import useWindowDimensions from "../hooks/window-dim"
@@ -195,9 +195,9 @@ class FlowAnimation{
 }
 
 const Animation = () => {
-	const canvasRef = React.useRef(null);
-	const homeAnimRef = React.useRef(null);
-	const requestIdRef = React.useRef(null);
+	const canvasRef = useRef(null);
+	const homeAnimRef = useRef(null);
+	const requestIdRef = useRef(null);
 	const {height, width} = useWindowDimensions();
 	const dpr = window.devicePixelRatio;
 

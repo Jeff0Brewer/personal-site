@@ -6,7 +6,7 @@ import "../style/work.css"
 const Project = props => {
   const [hover, setHover] = useState(false);
   const [focus, setFocus] = useState(false);
-  const mainWidth = 1200, cardHeight = mainWidth*.6, headerHeight = 350, contentRadius = 30;
+  const mainWidth = 1200, cardHeight = mainWidth*.55, headerHeight = 350, contentRadius = 30;
   const animTime = .4;
 
   return (
@@ -19,7 +19,7 @@ const Project = props => {
     }}
     transition={{duration: animTime}}>
       <motion.button className="proj-header" style={{cursor: focus? 'auto' : 'pointer'}}
-      animate={{height: focus ? headerHeight : '100%'}} 
+      animate={{height: focus ? `${headerHeight}px` : `${cardHeight}px`}} 
       transition={{duration: animTime}}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}

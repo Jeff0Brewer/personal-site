@@ -24,6 +24,7 @@
 	background-color: transparent;
 	text-transform: uppercase;
 	cursor: pointer;
+	overflow: hidden;
 }
 
 .navbar > button:hover{
@@ -52,4 +53,11 @@
 
 .nav-current{
 	color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+	.navbar > button{
+		width: 25%;
+		font-size: 16px;
+	}
 }

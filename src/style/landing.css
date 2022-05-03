@@ -36,24 +36,27 @@
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	padding: 0 40px;
 }
 
 .namecard > h1{
+	--size: 175px;
 	font-family: 'Quicksand', sans-serif;
 	font-weight: 300;
-	font-size: 175px;
+	font-size: var(--size);
+	line-height: var(--size);
 	letter-spacing: 0;
-	line-height: 175px;
 	margin: 0;
 }
 
 .namecard > p{
+	--size: 32px;
 	position: relative;
 	font-family: 'Quicksand', sans-serif;
 	font-weight: 600;
-	font-size: 32px;
-	line-height: 32px;
-	letter-spacing: 32px;
+	font-size: var(--size);
+	line-height: var(--size);
+	letter-spacing: var(--size);
 	margin: 0;
 	opacity: 0;
 }
@@ -65,4 +68,43 @@
 	font-size: 25px;
 	background-color: transparent;
 	opacity: 0;
+}
+
+@media screen and (max-width: 1200px){
+	.namecard > h1{
+		--size: 120px;
+	}
+
+	.namecard > p{
+		--size: 22px;
+	}
+
+	.arrow{
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 760px){
+	.namecard > h1{
+		--size: 90px;
+	}
+
+	.namecard > p{
+		--size: 17px;
+	}
+
+	.arrow{
+		font-size: 16px;
+		padding: 20px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.namecard > h1{
+		word-spacing: 100vw;
+	}
+
+	.namecard > p{
+		letter-spacing: 7px;
+	}
 }

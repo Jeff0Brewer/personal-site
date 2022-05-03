@@ -42,7 +42,7 @@ const Navbar = () => {
       </motion.button>
       <motion.button className="about-nav" ref={tabRefs[1]} 
       animate={{borderBottomWidth: focus === 1 ? borderMax : borderMin}} transition={{duration: animDuration}} 
-      onMouseUp={() => scrollToElement(document.getElementById('bio'))}>
+      onMouseUp={() => scrollToElement(document.getElementById('about'))}>
         About
       </motion.button>
       <motion.button className="work-nav" ref={tabRefs[2]} 

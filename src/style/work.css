@@ -8,6 +8,7 @@
 	display: block;
 	margin: var(--content-spacing) auto 0 auto;
 	width: var(--main-width);
+	height: fit-content;
 	border-radius: var(--content-radius);
 	background-color: #0a0a0a;
 	color: #fff;

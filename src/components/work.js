@@ -52,7 +52,11 @@ const Project = props => {
       >
         <IoCloseOutline />
       </button>
-      {props.children}
+      <div style={{ minHeight: `${cardHeight}px` }}>
+        <div style={{ display: focus ? 'block' : 'none' }}>
+          {props.children}
+        </div>
+      </div>
     </motion.section>
   )
 }

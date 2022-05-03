@@ -4,12 +4,10 @@ import { useInView } from 'react-intersection-observer'
 import '../style/about.css'
 
 const Bio = () => {
-  const [bioRef, bioInView] = useInView({ triggerOnce: true })
-
   return (
-    <article ref={bioRef} className='bio'>
-      <motion.img className='biopic' animate={{ opacity: bioInView ? 1 : 0, y: bioInView ? '0px' : '50px' }} transition={{ duration: 0.3 }} src='./static/biopic.jpg' alt='' />
-      <motion.div animate={{ opacity: bioInView ? 1 : 0, y: bioInView ? '0px' : '50px' }} transition={{ duration: 0.3, delay: 0.1 }} className='biotext'>
+    <article className='bio'>
+      <img className='biopic' src='./static/biopic.jpg' alt='' />
+      <div className='biotext'>
         <h1>Hi, I'm Jeff, a cs grad and developer.</h1>
         <p>
           You know what? It is beets. I've crashed into a beet truck. Eventually, you do plan to have dinosaurs on your dinosaur tour,
@@ -20,7 +18,7 @@ const Bio = () => {
           bucket seats, and... power windows. We gotta burn the rain forest, dump toxic waste, pollute the air, and rip up the OZONE! 'Cause maybe
           if we screw up this planet enough, they won't want it anymore!
         </p>
-      </motion.div>
+      </div>
     </article>
   )
 }

@@ -67,9 +67,9 @@ const GrvinContent = () => {
       <p>
         The granular geomechanics team at Caltech were working to understand patterns of failure in granular materials. They hoped to understand why 
         granular materials behave as they do, specifically, supporting force nonuniformly and breaking down in a characteristic 'shear band.' Further
-        understanding the physics in these granular samples would allow better materials to be engineered for applications like civil engineering. The
-        team had a lot of data but their ability to visualize and explore it was severely limited. Their current visualizations lacked interactivity, 
-        since rendering many grain surfaces can get computationally costly, and also suffered occlusion problems, where grains visibly obstruct each 
+        understanding the physics in these granular samples would allow better materials to be created for applications like civil engineering. The
+        team had a lot of data but their ability to visualize and explore it was severely limited. Their visualizations lacked interactivity, since 
+        rendering many grain surfaces can get computationally costly, and also suffered occlusion problems, where grains visibly obstruct each 
         other and any important patterns.
       </p>
       <img className="content-sm" src={`${imgDir}/old-vis.png`} alt=""/>
@@ -90,21 +90,19 @@ const GrvinContent = () => {
       </div>
       <h1>Final product:</h1>
       <p>
-        Yeah, but your scientists were so preoccupied with whether or not they could, they didn't stop to think if they 
-        should. This thing comes fully loaded. AM/FM radio, reclining bucket seats, and... power windows. Did he just 
-        throw my cat out of the window?
+        Our final design visualizes a flow field of grain movement, a vector field of forces between grains, and provides interactions to crop and 
+        select subsets of data. Displaying both visualizations side by side allows for easy reference between and pattern identification. Data can be
+        explored by slicing subsets of these large scale plots or by selecting sets of individual grain surfaces.
       </p>
       <img className="content-lg" src={`${imgDir}/sample-view.png`} alt=""/>
       <p>
-        I gave it a cold? I gave it a virus. A computer virus. My dad once told me, laugh and the world laughs with you, 
-        Cry, and I'll give you something to cry about you little bastard! Must go faster. I gave it a cold? I gave it a 
-        virus. A computer virus. What do they got in there? King Kong?
+        Once interesting patterns are identified and grain surfaces are selected, users can view animations of the grain surfaces, plot time series of 
+        the grains, and color map with additional data fields.
       </p>
       <img className="content-lg" src={`${imgDir}/multiples-view.png`} alt=""/>
       <p>
-        God help us, we're in the hands of engineers. Yeah, but John, if The Pirates of the Caribbean breaks down, the pirates
-        don't eat the tourists. Jaguar shark! So tell me - does it really exist? You're a very talented young man, with your own
-        clever thoughts and ideas. Do you need a manager?
+        All selection and slicing use 2d drawing interactions to maximize clarity and ease of use. Users draw the area they want directly on top 
+        of the visualization and then project into 3d space to select or crop.
       </p>
       <div className="content-lg col">
         <img className="two-col" src={`${imgDir}/crop-interaction.png`} alt=""/>

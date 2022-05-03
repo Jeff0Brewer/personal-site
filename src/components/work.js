@@ -18,7 +18,7 @@ const Project = props => {
       scale: !focus && hover ? 1.02 : 1
     }}
     transition={{duration: animTime}}>
-      <motion.button className="proj-header"
+      <motion.button className="proj-header" style={{cursor: focus? 'auto' : 'pointer'}}
       animate={{height: focus ? headerHeight : '100%'}} 
       transition={{duration: animTime}}
       onMouseEnter={() => setHover(true)}

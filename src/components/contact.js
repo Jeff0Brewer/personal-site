@@ -11,12 +11,13 @@ const Contact = () => {
           <a href="https://github.com/" id="github-icon" target="_blank" rel="noreferrer" aria-label="github"><FaGithub /></a>
           <a href="https://twitter.com/" id="twitter-icon" target="_blank" rel="noreferrer" aria-label="twitter"><FaTwitterSquare /></a>
         </div>
-        <div id="email-form">
+        <form id="email-form" action="https://formspree.io/f/xlezozyy" method="POST">
           <input id="name-input" type="text" placeholder="Name" name="name" required />
           <input id="email-input" type="text" placeholder="Your email" name="email" required />
           <textarea id="message-input" placeholder="Your message" name="message" required />
-          <button>Send</button>
-        </div>
+          <input type="text" name="_gotcha" style={{display: 'none'}} />
+          <button type="submit">Send</button>
+        </form>
       </section>
     );
 }

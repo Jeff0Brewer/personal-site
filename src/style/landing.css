@@ -60,6 +60,7 @@
 
 .arrow{
 	position: relative;
+	cursor: pointer;
 	padding: 30px;
 	font-size: 25px;
 	background-color: transparent;

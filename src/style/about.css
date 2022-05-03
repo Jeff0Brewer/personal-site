@@ -79,16 +79,3 @@
 	background-color: #222;
 	transform-origin: right center
 }
-
-.exp-bar-animate{
-	animation: animate-bar 2s ease-out forwards;
-}
-
-@keyframes animate-bar{
-	0%{
-		width: 100%;
-	}
-	100%{
-		width: 0;
-	}
-}

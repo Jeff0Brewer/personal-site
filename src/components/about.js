@@ -8,15 +8,14 @@ const Bio = () => {
     <article className='bio'>
       <img className='biopic' src='./static/biopic.jpg' alt='' />
       <div className='biotext'>
-        <h1>Hi, I'm Jeff, a cs grad and developer.</h1>
+        <h1>Hi, I'm Jeff, a developer and cs grad.</h1>
         <p>
-          You know what? It is beets. I've crashed into a beet truck. Eventually, you do plan to have dinosaurs on your dinosaur tour,
-          right? My dad once told me, laugh and the world laughs with you, Cry, and I'll give you something to cry about you little bastard!
+          Currently based in the SF bay area and looking for a full-time position. I'm passionate about graphics and love thinking about visual
+          representations of complex data. Efficiency, readability, and maintainability are top priorities for my code and I'm quick to adopt
+          new technologies or better workflows.
         </p>
         <p>
-          Forget the fat lady! You're obsessed with the fat lady! Drive us out of here! This thing comes fully loaded. AM/FM radio, reclining
-          bucket seats, and... power windows. We gotta burn the rain forest, dump toxic waste, pollute the air, and rip up the OZONE! 'Cause maybe
-          if we screw up this planet enough, they won't want it anymore!
+          Outside of work I like to experiment with visualization projects, go on nature excursions, and try too hard in video games.
         </p>
       </div>
     </article>

@@ -69,7 +69,7 @@ const GrvinContent = () => {
       <p>
         An interactive visualization tool for analyzing the underlying physics within granular materials. Grvin visualizes data from ~50,000
         individual grains over ~70 timesteps as a column of granular material (sand) deforms under load. Made in collaboration with Caltech,
-        Art Center, JPL, and designers Pooja Nair, Adrian Galvin.
+        Art Center, NASA JPL, and designers Pooja Nair, Adrian Galvin.
       </p>
       <video className='content-lg' autoPlay loop muted playsInline src={`${imgDir}/grvin-overview.mp4`} />
       <h1>Problem addressed:</h1>

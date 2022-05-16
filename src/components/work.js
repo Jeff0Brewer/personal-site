@@ -53,7 +53,7 @@ const Project = props => {
         <IoCloseOutline />
       </button>
       <div style={{ minHeight: `${cardHeight}px` }}>
-        <div style={{ display: focus ? 'block' : 'none' }}>
+        <div style={{ visibility: focus ? 'visible' : 'hidden' }}>
           {props.children}
         </div>
       </div>

@@ -1,17 +1,17 @@
 import * as React from 'react'
 import smoothscroll from 'smoothscroll-polyfill'
-import { Animation, Landing } from '../components/landing'
-import Navbar from '../components/navbar'
-import About from '../components/about'
-import Work from '../components/work'
-import Contact from '../components/contact'
-import '../style/index.css'
+import { Animation, Landing } from './components/landing'
+import Navbar from './components/navbar'
+import About from './components/about'
+import Work from './components/work'
+import Contact from './components/contact'
+import './App.css'
 
 // enable smooth scrolling on incompatible browsers
 smoothscroll.polyfill()
 
 // markup
-const IndexPage = () => {
+const App = () => {
   return (
     <main>
       <Animation />
@@ -26,4 +26,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default App

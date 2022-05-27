@@ -1,5 +1,5 @@
 node_modules/
 .cache/
 .DS_Store
-public/page-data
+public/
 notes.txt

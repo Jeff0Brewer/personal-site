@@ -7,8 +7,8 @@ const Contact = () => {
     <section id='contact'>
       <h1>Want to say hi?</h1>
       <div id='social-links'>
-        <a href='https://www.linkedin.com/' id='linkedin-icon' target='_blank' rel='noreferrer' aria-label='linkedin'><FaLinkedin /></a>
-        <a href='https://github.com/' id='github-icon' target='_blank' rel='noreferrer' aria-label='github'><FaGithub /></a>
+        <a href='https://www.linkedin.com/in/jeff-brewer-9246a1120' id='linkedin-icon' target='_blank' rel='noreferrer' aria-label='linkedin'><FaLinkedin /></a>
+        <a href='https://github.com/Jeff0Brewer' id='github-icon' target='_blank' rel='noreferrer' aria-label='github'><FaGithub /></a>
         <a href='https://twitter.com/' id='twitter-icon' target='_blank' rel='noreferrer' aria-label='twitter'><FaTwitterSquare /></a>
       </div>
       <form id='email-form' action='https://formspree.io/f/xlezozyy' method='POST'>
